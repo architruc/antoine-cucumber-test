@@ -1,3 +1,6 @@
+
+var PORT = 4000;
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -58,3 +61,16 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
+
+
+var server = app.listen(PORT, function () {
+  var host = server.address().address;
+  if (host === '::') {
+    host = 'localhost';
+  }
+  var port = server.address().port;
+  var address = port === 80 ? 'http://' + host : 'http://' + host + ':' + port;
+
+  console.log('Backend mock app listening at %s', address);
+});

@@ -1,0 +1,13 @@
+<!doctype html>
+<html ng-app="cucumber">
+<head>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="MainCtrl">
+<label><input type="text" ng-model="name"/></label>
+
+<p>Hi, my name is <span>{{name}}</span>!</p>
+</body>
+</html>
